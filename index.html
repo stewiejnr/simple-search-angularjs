@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Checkinz </title>
+		
+		<link href="assets/styler.css" rel="stylesheet" />
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		
+	</head>
+	<body ng-app="checkinz" ng-controller="GuestSearchController">
+		<div class="searchbar">
+			<input id="queryfield" type="text" ng-model="queryString" placeholder="Enter name or ticket id" />
+			
+		</div>
+		
+		<!-- <ul>
+			<li ng-repeat="i in items | searchFor:queryString">
+				<a href="{{i.title}}"><img ng-src="{{i.image}}" /></a>
+				<p>{{i.title}}</p>
+			</li>
+		</ul> -->
+		<table id="disptbl" class="table table-striped table-hover table-bordered" >
+			<thead>
+			<tr>
+				<th "class="theaders" id="gfield">Guest</th><th class="theaders" id="ngfield">#Guest</th><th class="theaders" >Edit</th><th class="theaders" id="cfield">Check In</th>
+			</tr>
+			<thead>
+			<tbody>
+			<tr ng-repeat="i in items | filter: paginate">
+				<td class="guestname">{{i.title}}</td><td class="numguest">{{i.nguest}}</td>
+				<td class="statusimg"><a href="query.php?resid={{i.resid}}" class="btn btn-info btn-sm"><span style="padding-right: 3px;"class="glyphicon glyphicon-edit"></span>Edit</a></td>
+				<td class="infofield">
+					<img src="assets/images/{{i.status}}.png" />
+				</td>
+			</tr>
+			</tbody>
+		</table>
+		<pagination total-items="totalItems" ng-model="currentPage"
+          max-size="5" boundary-links="true"
+          items-per-page="numPerPage" class="pagination-sm">
+        </pagination>
+		
+		 <!-- 
+		<script src="assets/js/angular.min.js"></script>
+		<script src="script.js"></script> -->
+		<script src="http://code.angularjs.org/1.2.16/angular.js"></script>
+		<script src="http://code.angularjs.org/1.2.16/angular-resource.js"></script>
+		<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+		<script src="script.js"></script>
+		
+	</body>
+</html>

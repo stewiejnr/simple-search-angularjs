@@ -1,0 +1,59 @@
+@media only screen and (min-width: 769px) {
+	input#queryfield {
+		width: 100%;
+		height: 40px;
+		font-size: 1.5em;
+	}
+	.searchbar {
+		padding-left: 30%;
+		padding-right: 30%;
+		margin-top: 10%;
+		
+	}
+	#disptbl, #attendeeinfo {
+		margin: 30px 20% 40px;
+		width: 60%;
+		
+	}
+	table, th , td  {
+	  border: 2px solid grey;
+	  border-collapse: collapse;
+	  padding: 10px !important;
+	}
+	
+	.theaders {
+		text-align: center;
+		font-size: 1.25em;
+	}
+	
+	.numguest, .statusimg, .infofield {
+		text-align: center;
+	}
+	
+	#gfield {
+		text-align: left;
+	}
+
+	table tr:nth-child(odd)	{
+	  background-color: #f1f1f1;
+	}
+	table tr:nth-child(even) {
+	  background-color: #ffffff;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	table, th , td  {
+	  border: 1px solid grey;
+	  border-collapse: collapse;
+	  padding: 5px;
+	}
+	
+	table tr:nth-child(odd)	{
+	  background-color: #f1f1f1;
+	}
+	
+	table tr:nth-child(even) {
+	  background-color: #ffffff;
+	}
+}
